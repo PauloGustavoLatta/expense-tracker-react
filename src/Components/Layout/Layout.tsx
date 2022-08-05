@@ -1,10 +1,20 @@
-import { Container } from './styles';
-import React from 'react';
+import { Body, Container, Header, HeaderText } from './styles';
+import { Category, Item } from '../../types/Types';
+import React, { useState } from 'react';
+import { categories, items } from '../../data/data';
 
 const Layout: React.FC = () => {
+  const [list, setList] = useState<Item[]>(items);
+
   return (
     <Container>
-      <h1>Iniciando projeto</h1>
+      <Header>
+        <HeaderText>Sistema Financeiro</HeaderText>
+      </Header>
+
+      <Body>
+        <h1>Iniciando projeto</h1>
+      </Body>
     </Container>
   );
 }
